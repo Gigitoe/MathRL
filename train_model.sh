@@ -1,6 +1,6 @@
 #!/bin/bash
 
-MODEL_PATH=models/Qwen3-8B
+MODEL_PATH=models/Qwen3-8B-Base
 
 current_date=$(date +%Y-%m-%d)
 
@@ -11,8 +11,8 @@ fi
 python -m verl.trainer.main_ppo \
     algorithm.adv_estimator=grpo \
     data.train_files=data/math_train.parquet \
-    data.val_files=data/math500.parquet,data/aime24_avg10.parquet,data/aime25_avg10.parquet,data/amc23_avg10.parquet,data/minerva_math.parquet,data/olympiad_bench.parquet \
-    data.train_batch_size=1024 \
+    data.val_files=[data/math500.parquet,data/aime24_avg10.parquet,data/aime25_avg10.parquet,data/amc23_avg10.parquet,data/minerva_math.parquet,data/olympiad_bench.parquet] \
+    data.train_batch_size=16 \
     data.max_prompt_length=1024 \
     data.max_response_length=8192 \
     data.filter_overlong_prompts=False \
