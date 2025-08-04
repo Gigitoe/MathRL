@@ -4,7 +4,7 @@ import torch
 
 # First, log in with your Hugging Face credentials
 # This will prompt you for your token if you don't provide it
-login(token="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")  # You can also pass your token directly: login(token="your_token_here")
+login(token="your token here")  # You can also pass your token directly: login(token="your_token_here")
 
 # Correct model identifier (adjust based on the exact model you have access to)
 organization_name = "meta-llama"
