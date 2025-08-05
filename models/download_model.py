@@ -3,8 +3,8 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 import torch
 
 # Correct model identifier (adjust based on the exact model you have access to)
-organization_name = "meta-llama"
-model_name = "Llama-3.2-3B"
+organization_name = "Qwen"
+model_name = "Qwen2.5-3B"
 
 # Load model with bfloat16 precision
 model = AutoModelForCausalLM.from_pretrained(
